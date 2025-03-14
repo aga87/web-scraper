@@ -1,4 +1,12 @@
-# Selenium Web Crawler with Headless Chrome
+# Web Scraping using Selenium with Headless Chrome
+
+## Tech Stack
+
+- Node.js
+- Typescript
+- **Selenium WebDriver** is a library that provides APIs to interact with web browsers (like Chrome, Firefox, etc.) for automating web tasks like crawling, scraping, and testing. It allows you to control browsers programmatically, simulate user actions (like clicks and form submissions), and extract data from pages. It supports multiple browsers, and you can configure it to work with Chrome via **chromedriver**. - [selenium-webdriver on npm](https://www.npmjs.com/package/selenium-webdriver)
+
+- **ChromeDriver** is a standalone server that implements the WebDriver protocol for Chromium-based browsers (like Chrome). It is used by Selenium to control Chrome in both headless and non-headless modes. It acts as the bridge between Selenium and Chrome, executing commands on the browser.  - [chromedriver on npm](https://www.npmjs.com/package/chromedriver)
 
 ## Branches
 
