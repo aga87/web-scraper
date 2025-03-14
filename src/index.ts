@@ -1,5 +1,7 @@
+import "dotenv/config";
 import { Builder, By, until } from "selenium-webdriver";
 import chrome from "selenium-webdriver/chrome";
+import { debugLog } from "./startup";
 
 async function startScrape() {
   const options = new chrome.Options();
@@ -20,11 +22,11 @@ async function startScrape() {
 
     // Extract and log the page title
     const title = await driver.getTitle();
-    console.log("Page title is:", title);
+    debugLog("Page title is:", title);
 
     // Extract a specific element (for example, the first heading in the page)
     const heading = await driver.findElement(By.css("h1")).getText();
-    console.log("Heading on the page:", heading);
+    debugLog("Heading on the page:", heading);
   } finally {
     await driver.quit();
   }
