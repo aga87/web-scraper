@@ -12,9 +12,17 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/debug": "^4.1.12",
     "@types/node": "^22.13.10",
+    "@types/selenium-webdriver": "^4.1.28",
+    "debug": "^4.4.0",
     "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "chromedriver": "^134.0.3",
+    "dotenv": "^16.4.7",
+    "selenium-webdriver": "^4.29.0"
   }
 }
