@@ -18,6 +18,19 @@ A proof of concept demonstrating clean Selenium scraping with both single-page a
 
 **Important**: The ChromeDriver version must match the installed Google Chrome major version.
 
+## Architecture Overview
+
+- WebDriverService – Stateless driver factory responsible for creating and configuring Chrome instances.
+- WebScraperService – Workflow wrapper that manages browser lifecycle (create → navigate → execute → quit).
+- Domain Scrapers (e.g. MdnDocsScraperService) – Encapsulate site-specific scraping logic.
+- Selenium Helpers (libs/selenium) – Reusable utilities for waits and safe text extraction.
+
+## Features
+
+Chrome-based web scraping (headless by default, headed supported):
+
+- Single-page scraping
+- Batch scraping using a shared browser session
 
 
 ## Testing in development
