@@ -8,3 +8,22 @@ A proof of concept demonstrating clean Selenium scraping with both single-page a
 
 - `dev` - Development branch. This is the default branch for ongoing development work. It is where new features and bug fixes are implemented and tested before being merged into the main branch.
 
+
+## Tech Stack
+
+- Node.js
+- Typescript
+- **Selenium WebDriver** - Browser automation APIs for scraping and testing. [selenium-webdriver on npm](https://www.npmjs.com/package/selenium-webdriver)
+- **ChromeDriver** - Implements the WebDriver protocol for Chrome.  - [chromedriver on npm](https://www.npmjs.com/package/chromedriver). 
+
+**Important**: The ChromeDriver version must match the installed Google Chrome major version.
+
+
+
+## Testing in development
+
+```shell
+npm run dev
+
+ts-node src/index.ts
+```
