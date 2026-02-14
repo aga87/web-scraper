@@ -1,4 +1,4 @@
-# Web Scraping using Selenium with Headless Chrome
+# Web Scraping using Selenium
 
 A proof of concept demonstrating clean Selenium scraping with both single-page and session-based workflows in TypeScript.
 
