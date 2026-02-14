@@ -40,4 +40,22 @@ export class WebScraperService {
       await driver.quit();
     }
   }
+
+  /**
+   * Runs multiple navigation actions in a single browser session (one WebDriver instance).
+   * Useful for batch scraping to avoid the overhead of launching Chrome for every URL.
+   */
+  public async runSession<T>(
+    fn: (driver: WebDriver) => Promise<T>,
+    opts: { headless?: boolean } = {},
+  ): Promise<T> {
+    const driver = await this.webDriverService.createDriver(
+      opts.headless ?? true,
+    );
+    try {
+      return await fn(driver);
+    } finally {
+      await driver.quit();
+    }
+  }
 }

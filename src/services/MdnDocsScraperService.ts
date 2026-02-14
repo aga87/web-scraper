@@ -28,6 +28,24 @@ export class MdnDocsScraperService {
     );
   }
 
+  public async scrapeMany(urls: string[]): Promise<MdnDocSnapshot[]> {
+    return this.scraper.runSession(
+      async (driver) => {
+        const results: MdnDocSnapshot[] = [];
+
+        for (const url of urls) {
+          await driver.get(url);
+          const result = await this.scrapeSnapshotFromCurrentPage(driver, url);
+
+          results.push(result);
+        }
+
+        return results;
+      },
+      { headless: true },
+    );
+  }
+
   /** Scrape snapshot assuming the driver is already on the target page.
    *  - Document title
    * - H1 heading
